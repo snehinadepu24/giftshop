@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Products</h1>
+  <div id="products" class="grid"></div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => window.GiftShop.loadProducts());
+  </script>
+{% endblock %}

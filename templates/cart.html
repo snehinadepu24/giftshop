@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Your Cart</h1>
+  <div id="cart"></div>
+  <div id="cart-total" class="total"></div>
+  <div class="actions">
+    <button class="btn" onclick="GiftShop.clearCart()">Clear Cart</button>
+    <a class="btn" href="{{ url_for('checkout_page') }}">Go to Checkout</a>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => window.GiftShop.loadCart());
+  </script>
+{% endblock %}
